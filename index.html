@@ -9,15 +9,32 @@
 </head>
 <body ng-controller="myController">
 
-	<div id="wrapper">
-		<div id="header">
-			<h1>Consider the following</h1>
+	<div class="container">
+		<div class="row">
+			Search:<input ng-model="query" type="text">
+			<table>
+				<tr>
+					<th><a href="" ng-click="sortField = 'name'; reverse = !reverse";>Name</a></th>
+					<th><a href="" ng-click="sortField = 'name'; reverse = !reverse";>Description</a></th>
+				</tr>
+				<tr ng-repeat="student in students | filter:query | orderBy:sortField:reverse">
+					<td>{{student.name}}</td>
+					<td>{{student.desc}}</td>
+				</tr>
+			</table>
 		</div>
-	</div>
-
-	<div class="item" ng-repeat="item in items">
-		Name: {{item.name}}... {{item.desc}}
 	</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

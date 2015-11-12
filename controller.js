@@ -4,7 +4,7 @@
 
 var myApp=angular.module('myApp', [])
 myApp.controller('myController', function($scope){
-	$scope.items = [
+	$scope.students = [
 	{
 		name: "Freddy", 
 		desc: "Made a cool weather widget"
